@@ -2,6 +2,8 @@
 * {
     font-family: 'Raleway', sans-serif;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
@@ -42,7 +44,6 @@ a {
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
-
 .card img {
     object-fit: cover;
 }
@@ -57,6 +58,75 @@ a {
 
 .neutral-star {
     color: var(--main-bg-color)
+}
+button {
+    cursor: pointer;
+}
+/****** HEADER *********************************/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.logo {
+    max-width: 60px;
+    height: auto;
+}
+
+
+/****** Headline  *****************************/
+.info-group {
+    margin: 30px 0;
+}
+.headline {
+    margin-bottom: 20px;
+}
+.headline h1 {
+    margin: 5px 0;
+}
+
+/****** Search-bar  ***********************/
+.search-bar {
+    display: inline-flex;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.search-bar i {
+    appearance: none;
+    border: 0;
+    padding: 14px 18px;
+    background-color: var(--main-bg-color);
+    color: black;
+}
+
+.search-bar input {
+    appearance: none;
+    border: 0;
+    border-top: 1px var(--main-bg-color) solid;
+    border-bottom: 1px var(--main-bg-color) solid;
+    padding: 14px 18px;
+    font-weight: bold;
+}
+
+.search-bar button {
+    appearance: none;
+    border: 0;
+    padding: 14px 18px;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+}
+/****** Filters ***********************/
+.filters {
+    display: flex;
+    gap: 18px;
 }
 
 /****** Hebergements And Populaires ***********/
@@ -121,12 +191,24 @@ a {
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
+/****** Footer ********************/
 
-footer {
-    background: var(--main-bg-color);
+.footer-container {
+    display: flex;
+    gap: 10%;
+    flex-direction: row;
+    background-color: var(--main-bg-color);
+    padding: 0 20px;
 }
 
+.footer-container > div {
+    width: 100%;
+}
 
+.footer-container ul {
+    padding: 0;
+    line-height: 35px;
+}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
@@ -166,5 +248,7 @@ footer {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    .footer-container {
+        flex-direction: column;
+      }
 }
