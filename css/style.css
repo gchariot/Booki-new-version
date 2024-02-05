@@ -136,6 +136,12 @@ header {
     font-weight: bold;
     font-size: 1rem;
 }
+.search-bar button .text {
+    display: inline;
+}
+.search-bar button .icon {
+    display: none;
+}
 /****** Filters ***********************/
 .filters {
     display: flex;
@@ -158,9 +164,21 @@ header {
 .filters i {
     margin: 5px;
 }
-
+.disponibility {
+    display: flex;
+}
+.disponibility p {
+    margin-left: 5px;
+}
 .disponibility i {
-    padding-right: 5px;
+    color: var(--main-color);
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /****** Hebergements And Populaires ***********/
@@ -184,20 +202,24 @@ header {
 .hebergements-cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+    margin: 20px 0;
 }
+
 .hebergements-cards .card {
     display: flex;
     flex-direction: column;
 }
+
 .hebergements-cards img {
     width: 100%;
-    height: 100px;
+    height: 110px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
+
 .hebergements-cards .card-content {
     width: 100%;
     padding-left: 10px;
@@ -210,7 +232,6 @@ header {
     margin-top: 10px;
     margin-bottom: 4px;
 }
-
 
 /****** Populaires ***********/
 .populaires {
@@ -312,6 +333,14 @@ header {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+    .search-bar button .text {
+        display:none;
+     }
+  
+     .search-bar button .icon {
+        display:inline;
+     }
+    
     .footer-container {
         flex-direction: column;
       }
