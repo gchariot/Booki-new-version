@@ -51,8 +51,6 @@ a {
 
 .card-title {
     font-size: 16px;
-    margin-top: 10px;
-    margin-bottom: 4px;
 }
 
 .euro {
@@ -67,18 +65,18 @@ button {
 }
 
 /****** HEADER *********************************/
-header {
+nav {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
-    margin: 5px;
+    justify-content: space-between;
+    margin: 20px 0;
 }
-
 .nav-links li {
     display: inline-block;
-    padding: 10px 20px;
     position: relative;
-    transition: 0.3s ease;
+    transition: 0.1s ease;
+    margin: 0 20px;
 }
 
 .nav-links li:hover {
@@ -87,11 +85,11 @@ header {
 
 .nav-links li:hover:before {
     content: "";
-    width: 80%;
+    width: 100%;
     height: 2px;
     position: absolute;
     background: var(--main-color);
-    transform: translateY(-15px);
+    transform: translateY(-20px);
 }
 
 .logo {
@@ -159,9 +157,10 @@ header {
 /****** Filters ***********************/
 .filters {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 18px;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .filters button {
@@ -184,6 +183,7 @@ header {
 
 .disponibility {
     display: flex;
+    align-items: center;
 }
 
 .disponibility p {
@@ -289,6 +289,11 @@ header {
     box-sizing: border-box;
 }
 
+.populaires-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
 .populaires-cards .card-subtitle {
     margin: 0;
 }
@@ -314,9 +319,15 @@ header {
     width: 100%;
 }
 
+.activites-cards .image-container {
+    height: 350px; /* or any other fixed height */
+    overflow: hidden; /* to ensure the image does not exceed the container */
+}
+
 .activites-cards img {
     width: 100%;
-    height: 350px;
+    height: 100%;
+    object-fit: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -328,6 +339,10 @@ header {
 .activites-cards .card-content {
     width: 100%;
     padding-left: 10px;
+}
+
+.activites-cards .card-title {
+    padding: 10px 0;
 }
 
 /****** Footer ********************/
@@ -351,6 +366,14 @@ header {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+    .search-bar input, .search-bar button {
+        padding: 10px 14px;
+        font-size: 0.8rem; 
+    }
+    .filters {
+        flex-direction: column;
+    }
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -380,6 +403,9 @@ header {
 
     .populaires-cards .card-subtitle {
         font-size: 13px;
+    }
+    .activites-cards .image-container {
+        height: 180px; /* adjust this value as needed */
     }
 }
 
