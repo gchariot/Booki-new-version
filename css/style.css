@@ -107,7 +107,6 @@ nav {
 
 .headline h1 {
     margin: 5px 0;
-    font: 22px;
 }
 
 /****** Search-bar  ***********************/
@@ -320,8 +319,8 @@ nav {
 }
 
 .activites-cards .image-container {
-    height: 350px; /* or any other fixed height */
-    overflow: hidden; /* to ensure the image does not exceed the container */
+    height: 350px;
+
 }
 
 .activites-cards img {
@@ -356,9 +355,12 @@ nav {
 .footer-container > div {
     width: 100%;
 }
+.footer-container h3 {
+    margin-bottom: 10px;
+}
 .footer-container ul {
     padding: 0;
-    line-height: 35px;
+    line-height: 25px;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -366,6 +368,9 @@ nav {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+    .headline h1 {
+        font-size: 1.3rem;
+    }
     .search-bar input, .search-bar button {
         padding: 10px 14px;
         font-size: 0.8rem; 
@@ -406,6 +411,9 @@ nav {
     }
     .activites-cards .image-container {
         height: 180px; /* adjust this value as needed */
+    }
+    .footer-container h3, ul {
+        font-size: 0.8rem;
     }
 }
 
