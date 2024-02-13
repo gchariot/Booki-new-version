@@ -4,7 +4,7 @@ Booki est une entreprise qui permet aux usagers de trouver des hébergements et 
 
 ## GitHub
 
-Retrouvez mon GitHub [ici] (https://github.com/gchariot)
+Retrouvez mon GitHub [ici](https://github.com/gchariot)
 
 ### Technologies used
 
